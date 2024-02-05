@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "78097618497",
+    "project_id": "freelance-ecommerce",
+    "storage_bucket": "freelance-ecommerce.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:78097618497:android:ef5db4ba1eb713b47f18c0",
+        "android_client_info": {
+          "package_name": "com.example.ecommerce"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnavZ6lRIn8cNGaw7WwZ2TCwhIbm5xKvk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

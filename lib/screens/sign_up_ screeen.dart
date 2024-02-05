@@ -2,6 +2,7 @@
 
 import 'package:country_code_picker/country_code_picker.dart';
 import 'package:ecommerce/constants/colors.dart';
+import 'package:ecommerce/screens/sign_in_screen.dart';
 import 'package:flutter/material.dart';
 
 class SignUpScreen extends StatelessWidget {
@@ -42,6 +43,7 @@ class SignUpScreen extends StatelessWidget {
               child: TextField(
                 decoration: InputDecoration(
                   hintText: 'النص هنا',
+                  hintTextDirection:  TextDirection.rtl,
                   filled: true,
                   fillColor: textFieldColor,
                   border: OutlineInputBorder(
@@ -59,7 +61,6 @@ class SignUpScreen extends StatelessWidget {
                   contentPadding:
                       EdgeInsets.symmetric(vertical: 10, horizontal: 20),
                 ),
-                textAlign: TextAlign.right,
               ),
             ),
             SizedBox(height: 20),
@@ -93,17 +94,22 @@ class SignUpScreen extends StatelessWidget {
               child: Row(
                 children: [
                   Expanded(
-                    child: Container(
-                      padding:
-                          EdgeInsets.symmetric(horizontal: 20, vertical: 13),
-                      decoration: BoxDecoration(
-                          color: buttonColor1,
-                          borderRadius: BorderRadius.circular(10)),
-                      child: Center(
-                          child: Text(
-                        "LogIn",
-                        style: TextStyle(color: Colors.white),
-                      )),
+                    child: GestureDetector(
+                      onTap: () {
+                          Navigator.of(context).push(MaterialPageRoute(builder: (context) => LogInScreen()));
+                      },
+                      child: Container(
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 20, vertical: 13),
+                        decoration: BoxDecoration(
+                            color: buttonColor1,
+                            borderRadius: BorderRadius.circular(10)),
+                        child: Center(
+                            child: Text(
+                          "LogIn",
+                          style: TextStyle(color: Colors.white),
+                        )),
+                      ),
                     ),
                   ),
                   Padding(

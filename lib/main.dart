@@ -1,10 +1,15 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:ecommerce/firebase_options.dart';
 import 'package:ecommerce/screens/sign_in_screen.dart';
-import 'package:ecommerce/screens/sign_up_%20screeen.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+);
   runApp(const MyApp());
 }
 
